@@ -9,6 +9,7 @@ script:
     - docker run -e CI=true koagyu/react_travis npm run test
 
 deploy:
+    skip_cleanup: true
     provider: elasticbeanstalk
     region: "us-east-2"
     app: "react_travis"
